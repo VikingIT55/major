@@ -1,0 +1,210 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-28 19:47+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+#: products/admin.py:31
+msgid "Approve selected reviews"
+msgstr "Схвалити вибрані відгуки"
+
+#: products/admin.py:35
+msgid "Reject selected reviews"
+msgstr "Відхилити вибрані відгуки"
+
+#: products/api.py:66
+msgid "Product ID is required"
+msgstr "Потрібно вказати ID продукту"
+
+#: products/models.py:21
+#, python-brace-format
+msgid "File size greater than {max_size_mb} MB."
+msgstr "Розмір файлу перевищує {max_size_mb} МБ"
+
+#: products/models.py:25
+#, python-brace-format
+msgid "The file extension is greater than {image_size} px."
+msgstr "Розмір файлу перевищує {image_size} px."
+
+#: products/models.py:31
+#, python-brace-format
+msgid "Only formats  {validate_tuple}"
+msgstr "Лише формати {validate_tuple}"
+
+#: products/models.py:35
+msgid "Category name (english)"
+msgstr "Назва категорії (англійською)"
+
+#: products/models.py:36
+msgid "A purpose category with this name (english) already exists."
+msgstr "Категорія призначення з такою назвою (англійською) вже існує."
+
+#: products/models.py:38
+msgid "Category name (ukrainian)"
+msgstr "Назва категорії (українською)"
+
+#: products/models.py:39
+msgid "A purpose category with this name (ukranian) already exists."
+msgstr "Категорія призначення з такою назвою (українською) вже існує."
+
+#: products/models.py:41 products/models.py:153
+msgid "image"
+msgstr "Зображення"
+
+#: products/models.py:49
+msgid "A purpose category with this english name already exists (different case)."
+msgstr "Категорія призначення з такою англійською назвою вже існує (інший регістр)."
+
+#: products/models.py:51
+msgid "A purpose category with this ukrainian name already exists (different case)."
+msgstr "Категорія призначення з такою українською назвою вже існує (інший регістр)."
+
+#: products/models.py:66
+msgid "Type name (english)"
+msgstr "Назва типу (англійською)"
+
+#: products/models.py:67
+msgid "A type with this name (english) already exists."
+msgstr "Категорія призначення з такою назвою (англійською) вже існує."
+
+#: products/models.py:69
+msgid "Type name (ukrainian)"
+msgstr "Назва типу (українською)"
+
+#: products/models.py:70
+msgid "A type with this name (ukranian) already exists."
+msgstr "Категорія призначення з такою назвою (українською) вже існує."
+
+#: products/models.py:78
+msgid "A type category with this english name already exists (different case)."
+msgstr "Категорія тип з такою англійською назвою вже існує (інший регістр)."
+
+#: products/models.py:80
+msgid "A type category with this ukrainian name already exists (different case)."
+msgstr "Категорія тип з такою українською назвою вже існує (інший регістр)."
+
+#: products/models.py:101
+msgid "article"
+msgstr "Артикул"
+
+#: products/models.py:102
+msgid "Product with this article already exists."
+msgstr "Продукт з цим артикулем вже існує."
+
+#: products/models.py:104
+msgid "available"
+msgstr "Доступний"
+
+#: products/models.py:105
+msgid "Product name (english)"
+msgstr "Назва продукту (англійською)"
+
+#: products/models.py:106
+msgid "Product name (ukrainian)"
+msgstr "Назва продукту (українською)"
+
+#: products/models.py:107
+msgid "Price"
+msgstr "Ціна"
+
+#: products/models.py:108
+msgid "Opt price"
+msgstr "Оптова ціна"
+
+#: products/models.py:109
+msgid "Dropshipper price"
+msgstr "Ціна Дропшипер"
+
+#: products/models.py:110
+msgid "Small opt price"
+msgstr "Малий опт"
+
+#: products/models.py:111
+msgid "Discount"
+msgstr "Знижка"
+
+#: products/models.py:112
+msgid "Price with discount"
+msgstr "Ціна з знижкою"
+
+#: products/models.py:113
+msgid "Description (ukrainian)"
+msgstr "Опис (українською)"
+
+#: products/models.py:114
+msgid "Description (english)"
+msgstr "Опис (англійською)"
+
+#: products/models.py:115
+msgid "Volume"
+msgstr "Об'єм"
+
+#: products/models.py:120
+msgid "Product type"
+msgstr "Тип продукту"
+
+#: products/models.py:122
+msgid "New"
+msgstr "Новинка"
+
+#: products/models.py:123
+msgid "Best seller"
+msgstr "Хіт"
+
+#: products/models.py:124
+msgid "Ingredients"
+msgstr "Склад"
+
+#: products/models.py:125
+msgid "Application (ukrainian)"
+msgstr "Застосування (українською)"
+
+#: products/models.py:126
+msgid "Application (english)"
+msgstr "Застосування (англійською)"
+
+#: products/models.py:161
+#, python-brace-format
+msgid "You can't add more than {max_images} images for a single product."
+msgstr "Ви не можете додати не більше ніж {max_images} зображень для одного товару."
+
+#: products/models.py:175
+msgid "User Name"
+msgstr "Ім'я користувача"
+
+#: products/models.py:179
+msgid "Rating"
+msgstr "Рейтинг"
+
+#: products/models.py:181
+msgid "Review Text"
+msgstr "Відгук"
+
+#: products/models.py:183
+msgid "Is Approved"
+msgstr "Затверджено"
+
+#: products/serializers.py:66
+msgid "Purpose category"
+msgstr "Категорія призначення"
+
+#: products/serializers.py:70
+msgid "Upload Images"
+msgstr "Завантажте зображення"

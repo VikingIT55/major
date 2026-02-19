@@ -1,0 +1,4 @@
+#**/migrations/
+staticfiles
+#.env
+#db.sqlite3

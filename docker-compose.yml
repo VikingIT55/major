@@ -1,0 +1,83 @@
+
+x-common-env: &common-env
+  PYTHONUNBUFFERED: "1"
+  DJANGO_SETTINGS_MODULE: "config.settings"
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: major_web
+    command: ["/bin/bash", "/app/entrypoint.sh"]
+    env_file:
+      - src/.env
+    environment:
+      <<: *common-env
+    volumes:
+      - ./data/static:/app/static
+      - ./data/media:/app/media
+    expose:
+      - "8000"
+    depends_on:
+      - redis
+    restart: unless-stopped
+    networks: [major]
+
+  shop_bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: major_shop_bot
+    command: ["python", "src/telegram_bot/shop_bot.py"]
+    env_file:
+      - src/.env
+    environment:
+      <<: *common-env
+    depends_on:
+      - redis
+      - web
+    restart: unless-stopped
+    networks: [major]
+
+  support_bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: major_support_bot
+    command: ["python", "src/telegram_bot/support_bot.py"]
+    env_file:
+      - src/.env
+    environment:
+      <<: *common-env
+    depends_on:
+      - redis
+      - web
+    restart: unless-stopped
+    networks: [major]
+
+  redis:
+    image: redis:7-alpine
+    container_name: major_redis
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - ./data/redis:/data
+    restart: unless-stopped
+    networks: [major]
+
+  nginx:
+    image: nginx:1.27-alpine
+    container_name: major_nginx
+    ports:
+      - "80:80"
+    depends_on:
+      - web
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./data/static:/var/www/static:ro
+      - ./data/media:/var/www/media:ro
+    restart: unless-stopped
+    networks: [major]
+
+networks:
+  major: {}
