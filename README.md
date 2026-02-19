@@ -122,13 +122,6 @@ The system includes:
 
 ---
 
-## 🧪 Testing
-
-Run tests with:
-
-```bash
-pytest
-```
 
 Tests cover core business logic and API endpoints.
 
