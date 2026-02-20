@@ -24,7 +24,7 @@ from payments.api import MonoClient
 from payments.telegram_utils import send_order_to_admin
 
 
-#Delete before deploy
+
 def get_shop_admin_ids() -> list[int]:
     admin_ids = os.getenv("SHOP_ADMIN_ID", "")
     if not admin_ids:
